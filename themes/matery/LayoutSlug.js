@@ -5,12 +5,12 @@ import LayoutBase from './LayoutBase'
 import Comment from '@/components/Comment'
 import NotionPage from '@/components/NotionPage'
 import ArticleAdjacent from './components/ArticleAdjacent'
-import ArticleCopyright from './components/ArticleCopyright'
+// import ArticleCopyright from './components/ArticleCopyright'
 import { ArticleInfo } from './components/ArticleInfo'
 import Catalog from './components/Catalog'
-import JumpToCommentButton from './components/JumpToCommentButton'
+// import JumpToCommentButton from './components/JumpToCommentButton'
 import throttle from 'lodash.throttle'
-import ShareBar from '@/components/ShareBar'
+// import ShareBar from '@/components/ShareBar'
 // import Announcement from './components/Announcement'
 
 export const LayoutSlug = props => {
@@ -51,7 +51,6 @@ export const LayoutSlug = props => {
       {...props}
       showCategory={false}
       showTag={false}
-      floatRightBottom={<JumpToCommentButton />}
     >
       <div id="inner-wrapper" className={'w-full lg:max-w-3xl 2xl:max-w-4xl'}>
         {/* 文章主体卡片 */}
@@ -98,9 +97,9 @@ export const LayoutSlug = props => {
                     />
                   </section>
                   {/* 分享 */}
-                  <ShareBar post={post} />
+                  {/* <ShareBar post={post} /> */}
                   {/* 文章版权说明 */}
-                  {post.type === 'Post' && <ArticleCopyright {...props} />}
+                  {/* {post.type === 'Post' && <ArticleCopyright {...props} />} */}
                 </article>
 
                 <hr className="border-dashed" />
