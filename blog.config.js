@@ -3,7 +3,7 @@ const BLOG = {
   // Important page_id！！！Duplicate Template from  https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5
   NOTION_PAGE_ID: process.env.NOTION_PAGE_ID,
   PSEUDO_STATIC: false, // 伪静态路径，开启后所有文章URL都以 .html 结尾。
-  NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND, // 更新内容缓存间隔 单位(秒)；即每个页面有5秒的纯静态期、此期间无论多少次访问都不会抓取notion数据；调大该值有助于节省Vercel资源、同时提升访问速率，但也会使文章更新有延迟。
+  NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 2, // 更新内容缓存间隔 单位(秒)；即每个页面有5秒的纯静态期、此期间无论多少次访问都不会抓取notion数据；调大该值有助于节省Vercel资源、同时提升访问速率，但也会使文章更新有延迟。
   THEME: process.env.NEXT_PUBLIC_THEME || 'matery', // 主题， 支持 ['next','hexo',"fukasawa','medium','example'] @see https://preview.tangly1024.com
   THEME_SWITCH: process.env.NEXT_PUBLIC_THEME_SWITCH || false, // 是否显示切换主题按钮
   LANG: process.env.NEXT_PUBLIC_LANG || 'zh-CN', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
@@ -192,7 +192,7 @@ const BLOG = {
 
   // twikoo
   COMMENT_TWIKOO_ENV_ID: process.env.NEXT_PUBLIC_COMMENT_ENV_ID || '', // TWIKOO后端地址 腾讯云环境填envId；Vercel环境填域名，教程：https://tangly1024.com/article/notionnext-twikoo
-  COMMENT_TWIKOO_COUNT_ENABLE: false, // 博客列表是否显示评论数
+  COMMENT_TWIKOO_COUNT_ENABLE: process.env.COMMENT_TWIKOO_COUNT_ENABLE || false, // 博客列表是否显示评论数
   COMMENT_TWIKOO_CDN_URL:
     process.env.NEXT_PUBLIC_COMMENT_TWIKOO_CDN_URL ||
     'https://cdn.staticfile.org/twikoo/1.6.16/twikoo.all.min.js', // twikoo客户端cdn
@@ -319,7 +319,7 @@ const BLOG = {
   // 作废配置
   AVATAR: process.env.NEXT_PUBLIC_AVATAR || '/avatar.svg', // 作者头像，被notion中的ICON覆盖。若无ICON则取public目录下的avatar.png
   TITLE: process.env.NEXT_PUBLIC_TITLE || 'codertao BLOG', // 站点标题 ，被notion中的页面标题覆盖
-  HOME_BANNER_IMAGE: process.env.NEXT_PUBLIC_HOME_BANNER_IMAGE, // 首页背景大图, 会被notion中的封面图覆盖，若无封面图则会使用代码中的 /public/bg_image.jpg 文件
+  HOME_BANNER_IMAGE: process.env.NEXT_PUBLIC_HOME_BANNER_IMAGE || '', // 首页背景大图, 会被notion中的封面图覆盖，若无封面图则会使用代码中的 /public/bg_image.jpg 文件
   DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || 'codertao的个人博客', // 站点描述，被notion中的页面描述覆盖
 
   // 网站图片
