@@ -931,6 +931,7 @@ code[class*='language-'] {
   box-sizing: border-box;
   margin: 4px 0;
   border: 1px solid var(--fg-color-0);
+  line-height: 0;
 }
 
 .dark-mode .notion-callout {
