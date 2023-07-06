@@ -159,11 +159,11 @@ const BLOG = {
   MUSIC_PLAYER_AUDIO_LIST: [
     // 示例音乐列表。除了以下配置外，还可配置歌词，具体配置项看此文档 https://aplayer.js.org/#/zh-Hans/
     {
-      name: '我记得-祝天下母亲,母亲节快乐！',
-      artist: '赵雷',
-      url: 'https://music.163.com/song/media/outer/url?id=1974443814.mp3',
+      name: 'Before I Fall In Love',
+      artist: '李玟',
+      url: 'https://music.163.com/song/media/outer/url?id=255227.mp3',
       cover:
-        'https://p2.music.126.net/FCWD6ibS2JK2B3QAnXuzwQ==/109951167805892385.jpg?param=130y130'
+        'https://p1.music.126.net/aBtVSd64QMHjAEqzCScTnA==/109951165992965024.jpg?param=130y130'
     }
   ],
   MUSIC_PLAYER_METING: process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING || false, // 是否要开启 MetingJS，从平台获取歌单。会覆盖自定义的 MUSIC_PLAYER_AUDIO_LIST，更多配置信息：https://github.com/metowolf/MetingJS
