@@ -558,11 +558,7 @@ summary > .notion-h {
 }
 
 .notion-link {
-  color: inherit;
-  word-break: break-word;
-  text-decoration: inherit;
-  border-bottom: 0.05em solid !important;
-  border-color: var(--fg-color-2);
+  color: A6CDE7;
   opacity: 0.7;
   transition: border-color 100ms ease-in, opacity 100ms ease-in;
 }
@@ -632,7 +628,6 @@ svg.notion-page-icon {
 }
 
 .notion-inline-code {
-  color: #eb5757;
   padding: 0.2em 0.4em;
   background: var(--bg-color-2);
   border-radius: 3px;
@@ -1955,7 +1950,7 @@ svg + .notion-page-title-text {
   display: block;
   border-radius: 5px;
   border-color: var(--notion-blue);
-  border-left-color: var(--notion-blue);
+  border-left-color: #a6cde7 !important;
   background-color: var(--notion-blue_background_co);
   width: 100%;
   white-space: pre-wrap;
