@@ -558,14 +558,9 @@ summary > .notion-h {
 }
 
 .notion-link {
-  color: A6CDE7;
-  opacity: 0.7;
-  transition: border-color 100ms ease-in, opacity 100ms ease-in;
-}
-
-.notion-link:hover {
-  border-color: var(--fg-color-6);
-  opacity: 1;
+  color: blue;
+  border-bottom: none;
+  text-decoration: none;
 }
 
 .notion-blank {
@@ -628,6 +623,7 @@ svg.notion-page-icon {
 }
 
 .notion-inline-code {
+  color: gray;
   padding: 0.2em 0.4em;
   background: var(--bg-color-2);
   border-radius: 3px;
